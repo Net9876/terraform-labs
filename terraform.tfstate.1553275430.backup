@@ -1,0 +1,945 @@
+{
+    "version": 3,
+    "terraform_version": "0.11.13",
+    "serial": 9,
+    "lineage": "01c0a6f0-75ff-9a9f-7450-5ce967127d1e",
+    "modules": [
+        {
+            "path": [
+                "root"
+            ],
+            "outputs": {
+                "webapp_ids": {
+                    "sensitive": false,
+                    "type": "list",
+                    "value": [
+                        "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-eastus",
+                        "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-eastus2",
+                        "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-westus"
+                    ]
+                }
+            },
+            "resources": {
+                "azurerm_app_service.citadel.0": {
+                    "type": "azurerm_app_service",
+                    "depends_on": [
+                        "azurerm_app_service_plan.free.*",
+                        "azurerm_resource_group.webapps"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/sites/citadel-eastus",
+                        "attributes": {
+                            "app_service_plan_id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-eastus",
+                            "app_settings.%": "1",
+                            "app_settings.WEBSITE_NODE_DEFAULT_VERSION": "6.9.1",
+                            "client_affinity_enabled": "true",
+                            "client_cert_enabled": "false",
+                            "connection_string.#": "0",
+                            "default_site_hostname": "citadel-eastus.azurewebsites.net",
+                            "enabled": "true",
+                            "https_only": "false",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/sites/citadel-eastus",
+                            "identity.#": "0",
+                            "location": "eastus",
+                            "name": "citadel-eastus",
+                            "outbound_ip_addresses": "40.114.68.21,104.211.58.13,104.211.60.235,104.211.60.25,104.211.59.188",
+                            "possible_outbound_ip_addresses": "40.114.68.21,104.211.58.13,104.211.60.235,104.211.60.25,104.211.59.188,104.211.63.146,104.211.59.198,104.211.59.203",
+                            "resource_group_name": "WebApps",
+                            "site_config.#": "1",
+                            "site_config.0.always_on": "false",
+                            "site_config.0.app_command_line": "",
+                            "site_config.0.default_documents.#": "9",
+                            "site_config.0.default_documents.0": "Default.htm",
+                            "site_config.0.default_documents.1": "Default.html",
+                            "site_config.0.default_documents.2": "Default.asp",
+                            "site_config.0.default_documents.3": "index.htm",
+                            "site_config.0.default_documents.4": "index.html",
+                            "site_config.0.default_documents.5": "iisstart.htm",
+                            "site_config.0.default_documents.6": "default.aspx",
+                            "site_config.0.default_documents.7": "index.php",
+                            "site_config.0.default_documents.8": "hostingstart.html",
+                            "site_config.0.dotnet_framework_version": "v4.0",
+                            "site_config.0.ftps_state": "AllAllowed",
+                            "site_config.0.http2_enabled": "false",
+                            "site_config.0.ip_restriction.#": "0",
+                            "site_config.0.java_container": "",
+                            "site_config.0.java_container_version": "",
+                            "site_config.0.java_version": "",
+                            "site_config.0.linux_fx_version": "",
+                            "site_config.0.local_mysql_enabled": "false",
+                            "site_config.0.managed_pipeline_mode": "Integrated",
+                            "site_config.0.min_tls_version": "1.2",
+                            "site_config.0.php_version": "5.6",
+                            "site_config.0.python_version": "",
+                            "site_config.0.remote_debugging_enabled": "false",
+                            "site_config.0.remote_debugging_version": "",
+                            "site_config.0.scm_type": "None",
+                            "site_config.0.use_32_bit_worker_process": "true",
+                            "site_config.0.virtual_network_name": "",
+                            "site_config.0.websockets_enabled": "false",
+                            "site_credential.#": "1",
+                            "site_credential.0.password": "6ynB7tfJLwkhpyXlFFfCrXnl1seyeLWLcFr4TCinEgvm1ksmKHHp9kteD48o",
+                            "site_credential.0.username": "$citadel-eastus",
+                            "source_control.#": "1",
+                            "source_control.0.branch": "master",
+                            "source_control.0.repo_url": "",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_app_service.citadel.1": {
+                    "type": "azurerm_app_service",
+                    "depends_on": [
+                        "azurerm_app_service_plan.free.*",
+                        "azurerm_resource_group.webapps"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/sites/citadel-eastus2",
+                        "attributes": {
+                            "app_service_plan_id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-eastus2",
+                            "app_settings.%": "1",
+                            "app_settings.WEBSITE_NODE_DEFAULT_VERSION": "6.9.1",
+                            "client_affinity_enabled": "true",
+                            "client_cert_enabled": "false",
+                            "connection_string.#": "0",
+                            "default_site_hostname": "citadel-eastus2.azurewebsites.net",
+                            "enabled": "true",
+                            "https_only": "false",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/sites/citadel-eastus2",
+                            "identity.#": "0",
+                            "location": "eastus2",
+                            "name": "citadel-eastus2",
+                            "outbound_ip_addresses": "40.123.45.47,13.77.89.87,13.77.90.154,52.177.199.231,13.77.89.84",
+                            "possible_outbound_ip_addresses": "40.123.45.47,13.77.89.87,13.77.90.154,52.177.199.231,13.77.89.84,52.177.196.67,52.232.240.12,13.77.95.144",
+                            "resource_group_name": "WebApps",
+                            "site_config.#": "1",
+                            "site_config.0.always_on": "false",
+                            "site_config.0.app_command_line": "",
+                            "site_config.0.default_documents.#": "9",
+                            "site_config.0.default_documents.0": "Default.htm",
+                            "site_config.0.default_documents.1": "Default.html",
+                            "site_config.0.default_documents.2": "Default.asp",
+                            "site_config.0.default_documents.3": "index.htm",
+                            "site_config.0.default_documents.4": "index.html",
+                            "site_config.0.default_documents.5": "iisstart.htm",
+                            "site_config.0.default_documents.6": "default.aspx",
+                            "site_config.0.default_documents.7": "index.php",
+                            "site_config.0.default_documents.8": "hostingstart.html",
+                            "site_config.0.dotnet_framework_version": "v4.0",
+                            "site_config.0.ftps_state": "AllAllowed",
+                            "site_config.0.http2_enabled": "false",
+                            "site_config.0.ip_restriction.#": "0",
+                            "site_config.0.java_container": "",
+                            "site_config.0.java_container_version": "",
+                            "site_config.0.java_version": "",
+                            "site_config.0.linux_fx_version": "",
+                            "site_config.0.local_mysql_enabled": "false",
+                            "site_config.0.managed_pipeline_mode": "Integrated",
+                            "site_config.0.min_tls_version": "1.2",
+                            "site_config.0.php_version": "5.6",
+                            "site_config.0.python_version": "",
+                            "site_config.0.remote_debugging_enabled": "false",
+                            "site_config.0.remote_debugging_version": "",
+                            "site_config.0.scm_type": "None",
+                            "site_config.0.use_32_bit_worker_process": "true",
+                            "site_config.0.virtual_network_name": "",
+                            "site_config.0.websockets_enabled": "false",
+                            "site_credential.#": "1",
+                            "site_credential.0.password": "nuqM4mC8bKTLCQXPQJ0iBp78G9Hw4Q0avnGmn5t2RfwrbCtndph9eE1GGlHD",
+                            "site_credential.0.username": "$citadel-eastus2",
+                            "source_control.#": "1",
+                            "source_control.0.branch": "master",
+                            "source_control.0.repo_url": "",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_app_service.citadel.2": {
+                    "type": "azurerm_app_service",
+                    "depends_on": [
+                        "azurerm_app_service_plan.free.*",
+                        "azurerm_resource_group.webapps"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/sites/citadel-westus",
+                        "attributes": {
+                            "app_service_plan_id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-westus",
+                            "app_settings.%": "1",
+                            "app_settings.WEBSITE_NODE_DEFAULT_VERSION": "6.9.1",
+                            "client_affinity_enabled": "true",
+                            "client_cert_enabled": "false",
+                            "connection_string.#": "0",
+                            "default_site_hostname": "citadel-westus.azurewebsites.net",
+                            "enabled": "true",
+                            "https_only": "false",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/sites/citadel-westus",
+                            "identity.#": "0",
+                            "location": "westus",
+                            "name": "citadel-westus",
+                            "outbound_ip_addresses": "40.80.156.205,40.80.152.218,104.42.156.123,104.42.216.21,40.78.63.47",
+                            "possible_outbound_ip_addresses": "40.80.156.205,40.80.152.218,104.42.156.123,104.42.216.21,40.78.63.47,40.80.156.103,40.78.62.97,40.80.153.6",
+                            "resource_group_name": "WebApps",
+                            "site_config.#": "1",
+                            "site_config.0.always_on": "false",
+                            "site_config.0.app_command_line": "",
+                            "site_config.0.default_documents.#": "9",
+                            "site_config.0.default_documents.0": "Default.htm",
+                            "site_config.0.default_documents.1": "Default.html",
+                            "site_config.0.default_documents.2": "Default.asp",
+                            "site_config.0.default_documents.3": "index.htm",
+                            "site_config.0.default_documents.4": "index.html",
+                            "site_config.0.default_documents.5": "iisstart.htm",
+                            "site_config.0.default_documents.6": "default.aspx",
+                            "site_config.0.default_documents.7": "index.php",
+                            "site_config.0.default_documents.8": "hostingstart.html",
+                            "site_config.0.dotnet_framework_version": "v4.0",
+                            "site_config.0.ftps_state": "AllAllowed",
+                            "site_config.0.http2_enabled": "false",
+                            "site_config.0.ip_restriction.#": "0",
+                            "site_config.0.java_container": "",
+                            "site_config.0.java_container_version": "",
+                            "site_config.0.java_version": "",
+                            "site_config.0.linux_fx_version": "",
+                            "site_config.0.local_mysql_enabled": "false",
+                            "site_config.0.managed_pipeline_mode": "Integrated",
+                            "site_config.0.min_tls_version": "1.2",
+                            "site_config.0.php_version": "5.6",
+                            "site_config.0.python_version": "",
+                            "site_config.0.remote_debugging_enabled": "false",
+                            "site_config.0.remote_debugging_version": "",
+                            "site_config.0.scm_type": "None",
+                            "site_config.0.use_32_bit_worker_process": "true",
+                            "site_config.0.virtual_network_name": "",
+                            "site_config.0.websockets_enabled": "false",
+                            "site_credential.#": "1",
+                            "site_credential.0.password": "BziyJqE0LyqDoRCH4j8b0g8BX5fl2qcxqrbWekk06MCnwb9k3oPj5Js08adZ",
+                            "site_credential.0.username": "$citadel-westus",
+                            "source_control.#": "1",
+                            "source_control.0.branch": "master",
+                            "source_control.0.repo_url": "",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_app_service_plan.free.0": {
+                    "type": "azurerm_app_service_plan",
+                    "depends_on": [
+                        "azurerm_resource_group.webapps"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-eastus",
+                        "attributes": {
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-eastus",
+                            "kind": "Linux",
+                            "location": "eastus",
+                            "maximum_number_of_workers": "1",
+                            "name": "plan-free-eastus",
+                            "per_site_scaling": "false",
+                            "properties.#": "1",
+                            "properties.0.app_service_environment_id": "",
+                            "properties.0.per_site_scaling": "false",
+                            "properties.0.reserved": "false",
+                            "reserved": "false",
+                            "resource_group_name": "WebApps",
+                            "sku.#": "1",
+                            "sku.0.capacity": "0",
+                            "sku.0.size": "F1",
+                            "sku.0.tier": "Free",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_app_service_plan.free.1": {
+                    "type": "azurerm_app_service_plan",
+                    "depends_on": [
+                        "azurerm_resource_group.webapps"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-eastus2",
+                        "attributes": {
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-eastus2",
+                            "kind": "Linux",
+                            "location": "eastus2",
+                            "maximum_number_of_workers": "1",
+                            "name": "plan-free-eastus2",
+                            "per_site_scaling": "false",
+                            "properties.#": "1",
+                            "properties.0.app_service_environment_id": "",
+                            "properties.0.per_site_scaling": "false",
+                            "properties.0.reserved": "false",
+                            "reserved": "false",
+                            "resource_group_name": "WebApps",
+                            "sku.#": "1",
+                            "sku.0.capacity": "0",
+                            "sku.0.size": "F1",
+                            "sku.0.tier": "Free",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_app_service_plan.free.2": {
+                    "type": "azurerm_app_service_plan",
+                    "depends_on": [
+                        "azurerm_resource_group.webapps"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-westus",
+                        "attributes": {
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps/providers/Microsoft.Web/serverfarms/plan-free-westus",
+                            "kind": "Linux",
+                            "location": "westus",
+                            "maximum_number_of_workers": "1",
+                            "name": "plan-free-westus",
+                            "per_site_scaling": "false",
+                            "properties.#": "1",
+                            "properties.0.app_service_environment_id": "",
+                            "properties.0.per_site_scaling": "false",
+                            "properties.0.reserved": "false",
+                            "reserved": "false",
+                            "resource_group_name": "WebApps",
+                            "sku.#": "1",
+                            "sku.0.capacity": "0",
+                            "sku.0.size": "F1",
+                            "sku.0.tier": "Free",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_network_security_rule.AllowSQLServer": {
+                    "type": "azurerm_network_security_rule",
+                    "depends_on": [
+                        "azurerm_network_security_group.resource_group_default",
+                        "azurerm_resource_group.nsgs"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowSQLServer",
+                        "attributes": {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes.#": "0",
+                            "destination_application_security_group_ids.#": "0",
+                            "destination_port_range": "1443",
+                            "destination_port_ranges.#": "0",
+                            "direction": "Inbound",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowSQLServer",
+                            "name": "AllowSQLServer",
+                            "network_security_group_name": "ResourceGroupDefault",
+                            "priority": "1030",
+                            "protocol": "Tcp",
+                            "resource_group_name": "NSGs",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes.#": "0",
+                            "source_application_security_group_ids.#": "0",
+                            "source_port_range": "*",
+                            "source_port_ranges.#": "0"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_network_security_rule.AllowSSH": {
+                    "type": "azurerm_network_security_rule",
+                    "depends_on": [
+                        "azurerm_network_security_group.resource_group_default",
+                        "azurerm_resource_group.nsgs"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowSSH",
+                        "attributes": {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes.#": "0",
+                            "destination_application_security_group_ids.#": "0",
+                            "destination_port_range": "22",
+                            "destination_port_ranges.#": "0",
+                            "direction": "Inbound",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowSSH",
+                            "name": "AllowSSH",
+                            "network_security_group_name": "ResourceGroupDefault",
+                            "priority": "1010",
+                            "protocol": "Tcp",
+                            "resource_group_name": "NSGs",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes.#": "0",
+                            "source_application_security_group_ids.#": "0",
+                            "source_port_range": "*",
+                            "source_port_ranges.#": "0"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_public_ip.vpnGatewayPublicIp": {
+                    "type": "azurerm_public_ip",
+                    "depends_on": [
+                        "azurerm_resource_group.core"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/publicIPAddresses/vpnGatewayPublicIp",
+                        "attributes": {
+                            "allocation_method": "Dynamic",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/publicIPAddresses/vpnGatewayPublicIp",
+                            "idle_timeout_in_minutes": "4",
+                            "ip_address": "",
+                            "ip_version": "IPv4",
+                            "location": "eastus2",
+                            "name": "vpnGatewayPublicIp",
+                            "public_ip_address_allocation": "Dynamic",
+                            "resource_group_name": "core",
+                            "sku": "Basic",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel",
+                            "zones.#": "0"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_resource_group.core": {
+                    "type": "azurerm_resource_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core",
+                        "attributes": {
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core",
+                            "location": "eastus2",
+                            "name": "core",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_resource_group.nsgs": {
+                    "type": "azurerm_resource_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs",
+                        "attributes": {
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs",
+                            "location": "eastus2",
+                            "name": "NSGs",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_resource_group.webapps": {
+                    "type": "azurerm_resource_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps",
+                        "attributes": {
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/WebApps",
+                            "location": "eastus2",
+                            "name": "WebApps",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_subnet.GatewaySubnet": {
+                    "type": "azurerm_subnet",
+                    "depends_on": [
+                        "azurerm_resource_group.core",
+                        "azurerm_virtual_network.core"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core/subnets/GatewaySubnet",
+                        "attributes": {
+                            "address_prefix": "10.0.0.0/24",
+                            "delegation.#": "0",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core/subnets/GatewaySubnet",
+                            "ip_configurations.#": "0",
+                            "name": "GatewaySubnet",
+                            "network_security_group_id": "",
+                            "resource_group_name": "core",
+                            "route_table_id": "",
+                            "service_endpoints.#": "0",
+                            "virtual_network_name": "core"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_subnet.dev": {
+                    "type": "azurerm_subnet",
+                    "depends_on": [
+                        "azurerm_resource_group.core",
+                        "azurerm_virtual_network.core"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core/subnets/dev",
+                        "attributes": {
+                            "address_prefix": "10.0.2.0/24",
+                            "delegation.#": "0",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core/subnets/dev",
+                            "ip_configurations.#": "0",
+                            "name": "dev",
+                            "network_security_group_id": "",
+                            "resource_group_name": "core",
+                            "route_table_id": "",
+                            "service_endpoints.#": "0",
+                            "virtual_network_name": "core"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_subnet.training": {
+                    "type": "azurerm_subnet",
+                    "depends_on": [
+                        "azurerm_resource_group.core",
+                        "azurerm_virtual_network.core"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core/subnets/training",
+                        "attributes": {
+                            "address_prefix": "10.0.1.0/24",
+                            "delegation.#": "0",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core/subnets/training",
+                            "ip_configurations.#": "0",
+                            "name": "training",
+                            "network_security_group_id": "",
+                            "resource_group_name": "core",
+                            "route_table_id": "",
+                            "service_endpoints.#": "0",
+                            "virtual_network_name": "core"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_virtual_network.core": {
+                    "type": "azurerm_virtual_network",
+                    "depends_on": [
+                        "azurerm_resource_group.core"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core",
+                        "attributes": {
+                            "address_space.#": "1",
+                            "address_space.0": "10.0.0.0/16",
+                            "ddos_protection_plan.#": "0",
+                            "dns_servers.#": "2",
+                            "dns_servers.0": "1.1.1.1",
+                            "dns_servers.1": "1.0.0.1",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core",
+                            "location": "eastus2",
+                            "name": "core",
+                            "resource_group_name": "core",
+                            "subnet.#": "3",
+                            "subnet.1402319291.address_prefix": "10.0.0.0/24",
+                            "subnet.1402319291.id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core/subnets/GatewaySubnet",
+                            "subnet.1402319291.name": "GatewaySubnet",
+                            "subnet.1402319291.security_group": "",
+                            "subnet.1974928574.address_prefix": "10.0.2.0/24",
+                            "subnet.1974928574.id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core/subnets/dev",
+                            "subnet.1974928574.name": "dev",
+                            "subnet.1974928574.security_group": "",
+                            "subnet.3710957902.address_prefix": "10.0.1.0/24",
+                            "subnet.3710957902.id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/core/providers/Microsoft.Network/virtualNetworks/core/subnets/training",
+                            "subnet.3710957902.name": "training",
+                            "subnet.3710957902.security_group": "",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "random_string.webapprnd": {
+                    "type": "random_string",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "none",
+                        "attributes": {
+                            "id": "none",
+                            "length": "8",
+                            "lower": "true",
+                            "min_lower": "0",
+                            "min_numeric": "0",
+                            "min_special": "0",
+                            "min_upper": "0",
+                            "number": "true",
+                            "result": "4800g3ho",
+                            "special": "false",
+                            "upper": "false"
+                        },
+                        "meta": {
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.random"
+                }
+            },
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "scaffold"
+            ],
+            "outputs": {},
+            "resources": {
+                "azurerm_network_security_group.nic_ubuntu": {
+                    "type": "azurerm_network_security_group",
+                    "depends_on": [
+                        "azurerm_resource_group.nsgs"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/NIC_Ubuntu",
+                        "attributes": {
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/NIC_Ubuntu",
+                            "location": "eastus2",
+                            "name": "NIC_Ubuntu",
+                            "resource_group_name": "NSGs",
+                            "security_rule.#": "1",
+                            "security_rule.1729925642.access": "Allow",
+                            "security_rule.1729925642.description": "",
+                            "security_rule.1729925642.destination_address_prefix": "*",
+                            "security_rule.1729925642.destination_address_prefixes.#": "0",
+                            "security_rule.1729925642.destination_application_security_group_ids.#": "0",
+                            "security_rule.1729925642.destination_port_range": "22",
+                            "security_rule.1729925642.destination_port_ranges.#": "0",
+                            "security_rule.1729925642.direction": "Inbound",
+                            "security_rule.1729925642.name": "SSH",
+                            "security_rule.1729925642.priority": "100",
+                            "security_rule.1729925642.protocol": "Tcp",
+                            "security_rule.1729925642.source_address_prefix": "*",
+                            "security_rule.1729925642.source_address_prefixes.#": "0",
+                            "security_rule.1729925642.source_application_security_group_ids.#": "0",
+                            "security_rule.1729925642.source_port_range": "*",
+                            "security_rule.1729925642.source_port_ranges.#": "0",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_network_security_group.nic_windows": {
+                    "type": "azurerm_network_security_group",
+                    "depends_on": [
+                        "azurerm_resource_group.nsgs"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/NIC_Windows",
+                        "attributes": {
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/NIC_Windows",
+                            "location": "eastus2",
+                            "name": "NIC_Windows",
+                            "resource_group_name": "NSGs",
+                            "security_rule.#": "1",
+                            "security_rule.1754140918.access": "Allow",
+                            "security_rule.1754140918.description": "",
+                            "security_rule.1754140918.destination_address_prefix": "*",
+                            "security_rule.1754140918.destination_address_prefixes.#": "0",
+                            "security_rule.1754140918.destination_application_security_group_ids.#": "0",
+                            "security_rule.1754140918.destination_port_range": "3389",
+                            "security_rule.1754140918.destination_port_ranges.#": "0",
+                            "security_rule.1754140918.direction": "Inbound",
+                            "security_rule.1754140918.name": "RDP",
+                            "security_rule.1754140918.priority": "100",
+                            "security_rule.1754140918.protocol": "Tcp",
+                            "security_rule.1754140918.source_address_prefix": "*",
+                            "security_rule.1754140918.source_address_prefixes.#": "0",
+                            "security_rule.1754140918.source_application_security_group_ids.#": "0",
+                            "security_rule.1754140918.source_port_range": "*",
+                            "security_rule.1754140918.source_port_ranges.#": "0",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_network_security_group.resource_group_default": {
+                    "type": "azurerm_network_security_group",
+                    "depends_on": [
+                        "azurerm_resource_group.nsgs"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault",
+                        "attributes": {
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault",
+                            "location": "eastus2",
+                            "name": "ResourceGroupDefault",
+                            "resource_group_name": "NSGs",
+                            "security_rule.#": "5",
+                            "security_rule.1086133882.access": "Allow",
+                            "security_rule.1086133882.description": "",
+                            "security_rule.1086133882.destination_address_prefix": "*",
+                            "security_rule.1086133882.destination_address_prefixes.#": "0",
+                            "security_rule.1086133882.destination_application_security_group_ids.#": "0",
+                            "security_rule.1086133882.destination_port_range": "80",
+                            "security_rule.1086133882.destination_port_ranges.#": "0",
+                            "security_rule.1086133882.direction": "Inbound",
+                            "security_rule.1086133882.name": "AllowHTTP",
+                            "security_rule.1086133882.priority": "1020",
+                            "security_rule.1086133882.protocol": "Tcp",
+                            "security_rule.1086133882.source_address_prefix": "*",
+                            "security_rule.1086133882.source_address_prefixes.#": "0",
+                            "security_rule.1086133882.source_application_security_group_ids.#": "0",
+                            "security_rule.1086133882.source_port_range": "*",
+                            "security_rule.1086133882.source_port_ranges.#": "0",
+                            "security_rule.128904666.access": "Allow",
+                            "security_rule.128904666.description": "",
+                            "security_rule.128904666.destination_address_prefix": "*",
+                            "security_rule.128904666.destination_address_prefixes.#": "0",
+                            "security_rule.128904666.destination_application_security_group_ids.#": "0",
+                            "security_rule.128904666.destination_port_range": "1443",
+                            "security_rule.128904666.destination_port_ranges.#": "0",
+                            "security_rule.128904666.direction": "Inbound",
+                            "security_rule.128904666.name": "AllowSQLServer",
+                            "security_rule.128904666.priority": "1030",
+                            "security_rule.128904666.protocol": "Tcp",
+                            "security_rule.128904666.source_address_prefix": "*",
+                            "security_rule.128904666.source_address_prefixes.#": "0",
+                            "security_rule.128904666.source_application_security_group_ids.#": "0",
+                            "security_rule.128904666.source_port_range": "*",
+                            "security_rule.128904666.source_port_ranges.#": "0",
+                            "security_rule.3143914032.access": "Allow",
+                            "security_rule.3143914032.description": "",
+                            "security_rule.3143914032.destination_address_prefix": "*",
+                            "security_rule.3143914032.destination_address_prefixes.#": "0",
+                            "security_rule.3143914032.destination_application_security_group_ids.#": "0",
+                            "security_rule.3143914032.destination_port_range": "22",
+                            "security_rule.3143914032.destination_port_ranges.#": "0",
+                            "security_rule.3143914032.direction": "Inbound",
+                            "security_rule.3143914032.name": "AllowSSH",
+                            "security_rule.3143914032.priority": "1010",
+                            "security_rule.3143914032.protocol": "Tcp",
+                            "security_rule.3143914032.source_address_prefix": "*",
+                            "security_rule.3143914032.source_address_prefixes.#": "0",
+                            "security_rule.3143914032.source_application_security_group_ids.#": "0",
+                            "security_rule.3143914032.source_port_range": "*",
+                            "security_rule.3143914032.source_port_ranges.#": "0",
+                            "security_rule.3356894320.access": "Allow",
+                            "security_rule.3356894320.description": "",
+                            "security_rule.3356894320.destination_address_prefix": "*",
+                            "security_rule.3356894320.destination_address_prefixes.#": "0",
+                            "security_rule.3356894320.destination_application_security_group_ids.#": "0",
+                            "security_rule.3356894320.destination_port_range": "443",
+                            "security_rule.3356894320.destination_port_ranges.#": "0",
+                            "security_rule.3356894320.direction": "Inbound",
+                            "security_rule.3356894320.name": "AllowHTTPS",
+                            "security_rule.3356894320.priority": "1021",
+                            "security_rule.3356894320.protocol": "Tcp",
+                            "security_rule.3356894320.source_address_prefix": "*",
+                            "security_rule.3356894320.source_address_prefixes.#": "0",
+                            "security_rule.3356894320.source_application_security_group_ids.#": "0",
+                            "security_rule.3356894320.source_port_range": "*",
+                            "security_rule.3356894320.source_port_ranges.#": "0",
+                            "security_rule.4092169301.access": "Allow",
+                            "security_rule.4092169301.description": "",
+                            "security_rule.4092169301.destination_address_prefix": "*",
+                            "security_rule.4092169301.destination_address_prefixes.#": "0",
+                            "security_rule.4092169301.destination_application_security_group_ids.#": "0",
+                            "security_rule.4092169301.destination_port_range": "3389",
+                            "security_rule.4092169301.destination_port_ranges.#": "0",
+                            "security_rule.4092169301.direction": "Inbound",
+                            "security_rule.4092169301.name": "AllowRDP",
+                            "security_rule.4092169301.priority": "1040",
+                            "security_rule.4092169301.protocol": "Tcp",
+                            "security_rule.4092169301.source_address_prefix": "*",
+                            "security_rule.4092169301.source_address_prefixes.#": "0",
+                            "security_rule.4092169301.source_application_security_group_ids.#": "0",
+                            "security_rule.4092169301.source_port_range": "*",
+                            "security_rule.4092169301.source_port_ranges.#": "0",
+                            "tags.%": "2",
+                            "tags.env": "training",
+                            "tags.source": "citadel"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_network_security_rule.AllowHTTP": {
+                    "type": "azurerm_network_security_rule",
+                    "depends_on": [
+                        "azurerm_network_security_group.resource_group_default",
+                        "azurerm_resource_group.nsgs"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowHTTP",
+                        "attributes": {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes.#": "0",
+                            "destination_application_security_group_ids.#": "0",
+                            "destination_port_range": "80",
+                            "destination_port_ranges.#": "0",
+                            "direction": "Inbound",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowHTTP",
+                            "name": "AllowHTTP",
+                            "network_security_group_name": "ResourceGroupDefault",
+                            "priority": "1020",
+                            "protocol": "Tcp",
+                            "resource_group_name": "NSGs",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes.#": "0",
+                            "source_application_security_group_ids.#": "0",
+                            "source_port_range": "*",
+                            "source_port_ranges.#": "0"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_network_security_rule.AllowHTTPS": {
+                    "type": "azurerm_network_security_rule",
+                    "depends_on": [
+                        "azurerm_network_security_group.resource_group_default",
+                        "azurerm_resource_group.nsgs"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowHTTPS",
+                        "attributes": {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes.#": "0",
+                            "destination_application_security_group_ids.#": "0",
+                            "destination_port_range": "443",
+                            "destination_port_ranges.#": "0",
+                            "direction": "Inbound",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowHTTPS",
+                            "name": "AllowHTTPS",
+                            "network_security_group_name": "ResourceGroupDefault",
+                            "priority": "1021",
+                            "protocol": "Tcp",
+                            "resource_group_name": "NSGs",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes.#": "0",
+                            "source_application_security_group_ids.#": "0",
+                            "source_port_range": "*",
+                            "source_port_ranges.#": "0"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_network_security_rule.AllowRDP": {
+                    "type": "azurerm_network_security_rule",
+                    "depends_on": [
+                        "azurerm_network_security_group.resource_group_default",
+                        "azurerm_resource_group.nsgs"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowRDP",
+                        "attributes": {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes.#": "0",
+                            "destination_application_security_group_ids.#": "0",
+                            "destination_port_range": "3389",
+                            "destination_port_ranges.#": "0",
+                            "direction": "Inbound",
+                            "id": "/subscriptions/07408276-377b-474d-85ed-a28649bc67ab/resourceGroups/NSGs/providers/Microsoft.Network/networkSecurityGroups/ResourceGroupDefault/securityRules/AllowRDP",
+                            "name": "AllowRDP",
+                            "network_security_group_name": "ResourceGroupDefault",
+                            "priority": "1040",
+                            "protocol": "Tcp",
+                            "resource_group_name": "NSGs",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes.#": "0",
+                            "source_application_security_group_ids.#": "0",
+                            "source_port_range": "*",
+                            "source_port_ranges.#": "0"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                }
+            },
+            "depends_on": []
+        }
+    ]
+}
