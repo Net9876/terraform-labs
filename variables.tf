@@ -9,3 +9,6 @@ variable "tags" {
         env     = "training"
     }
 }
+variable "webapplocs" {
+  default       = ["eastus", "eastus2", "southindia"]
+}
